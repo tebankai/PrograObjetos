@@ -11,7 +11,7 @@ package com.mycompany.proyectopoo.Forms;
 public class AdminPlant extends javax.swing.JPanel {
 
     /**
-     * Creates new form Home
+     * Creates new form Home lalalal
      */
     public AdminPlant() {
         initComponents();
