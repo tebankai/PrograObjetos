@@ -2,18 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.mycompany.proyectopoo.Forms;
+package com.mycompany.proyectopoo.Forms.CitasMantenimientos;
+
+import com.mycompany.proyectopoo.Forms.Clientes.*;
+import com.mycompany.proyectopoo.Forms.Plantas.*;
 
 /**
  *
  * @author ester
  */
-public class AdminPlant extends javax.swing.JPanel {
+public class AdminCitasManteniento extends javax.swing.JPanel {
 
     /**
-     * Creates new form Home lalalal
+     * Creates new form Home
      */
-    public AdminPlant() {
+    public AdminCitasManteniento() {
         initComponents();
     }
 
@@ -30,11 +33,11 @@ public class AdminPlant extends javax.swing.JPanel {
         UserName = new javax.swing.JLabel();
         SignOut = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
-        SearchBar = new javax.swing.JTextField();
+        SearchBarCitasMant = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        ListaCitasMante = new javax.swing.JList<>();
+        ModCitaMante = new javax.swing.JButton();
+        EliminarCitaMate = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(19, 23, 29));
 
@@ -73,28 +76,28 @@ public class AdminPlant extends javax.swing.JPanel {
         Background.setBackground(new java.awt.Color(19, 23, 29));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        SearchBar.setText("Buscar Planta");
-        SearchBar.addActionListener(new java.awt.event.ActionListener() {
+        SearchBarCitasMant.setText("Buscar Citas de Manteniento");
+        SearchBarCitasMant.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SearchBarActionPerformed(evt);
+                SearchBarCitasMantActionPerformed(evt);
             }
         });
-        Background.add(SearchBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, -1));
+        Background.add(SearchBarCitasMant, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, -1));
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        ListaCitasMante.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane1.setViewportView(jList1);
+        jScrollPane1.setViewportView(ListaCitasMante);
 
         Background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 430, -1));
 
-        jButton1.setText("Modificar");
-        Background.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+        ModCitaMante.setText("Modificar");
+        Background.add(ModCitaMante, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
-        jButton2.setText("Eliminar");
-        Background.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
+        EliminarCitaMate.setText("Eliminar");
+        Background.add(EliminarCitaMate, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,20 +123,20 @@ public class AdminPlant extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void SearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBarActionPerformed
+    private void SearchBarCitasMantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBarCitasMantActionPerformed
        //Adding stuff
-    }//GEN-LAST:event_SearchBarActionPerformed
+    }//GEN-LAST:event_SearchBarCitasMantActionPerformed
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JTextField SearchBar;
+    private javax.swing.JButton EliminarCitaMate;
+    private javax.swing.JList<String> ListaCitasMante;
+    private javax.swing.JButton ModCitaMante;
+    private javax.swing.JTextField SearchBarCitasMant;
     private javax.swing.JLabel SignOut;
     private javax.swing.JPanel TopBar;
     private javax.swing.JLabel UserName;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,18 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.mycompany.proyectopoo.Forms;
+package com.mycompany.proyectopoo.Forms.Servicios;
+
+import com.mycompany.proyectopoo.Forms.Clientes.*;
+import com.mycompany.proyectopoo.Forms.Plantas.*;
 
 /**
  *
  * @author ester
  */
-public class InventPlant extends javax.swing.JPanel {
+public class AdminServicios extends javax.swing.JPanel {
 
     /**
      * Creates new form Home
      */
-    public InventPlant() {
+    public AdminServicios() {
         initComponents();
     }
 
@@ -30,8 +33,11 @@ public class InventPlant extends javax.swing.JPanel {
         UserName = new javax.swing.JLabel();
         SignOut = new javax.swing.JLabel();
         Background = new javax.swing.JPanel();
-        ConsultPlant = new javax.swing.JButton();
-        RegPlant = new javax.swing.JButton();
+        SearchBarService = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        ListaService = new javax.swing.JList<>();
+        ModService = new javax.swing.JButton();
+        EliminarService = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(19, 23, 29));
 
@@ -70,31 +76,28 @@ public class InventPlant extends javax.swing.JPanel {
         Background.setBackground(new java.awt.Color(19, 23, 29));
         Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        ConsultPlant.setBackground(new java.awt.Color(15, 52, 52));
-        ConsultPlant.setFont(new java.awt.Font("Champagne & Limousines", 1, 14)); // NOI18N
-        ConsultPlant.setForeground(new java.awt.Color(255, 255, 255));
-        ConsultPlant.setText("Administrar Plantas");
-        ConsultPlant.setBorder(null);
-        ConsultPlant.setBorderPainted(false);
-        Background.add(ConsultPlant, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 200, 90));
-
-        RegPlant.setBackground(new java.awt.Color(15, 52, 52));
-        RegPlant.setFont(new java.awt.Font("Champagne & Limousines", 1, 14)); // NOI18N
-        RegPlant.setForeground(new java.awt.Color(255, 255, 255));
-        RegPlant.setText("Registrar Plantas");
-        RegPlant.setBorder(null);
-        RegPlant.setBorderPainted(false);
-        RegPlant.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                RegPlantMouseEntered(evt);
-            }
-        });
-        RegPlant.addActionListener(new java.awt.event.ActionListener() {
+        SearchBarService.setText("Buscar Servicio");
+        SearchBarService.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                RegPlantActionPerformed(evt);
+                SearchBarServiceActionPerformed(evt);
             }
         });
-        Background.add(RegPlant, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 200, 90));
+        Background.add(SearchBarService, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 430, -1));
+
+        ListaService.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(ListaService);
+
+        Background.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 430, -1));
+
+        ModService.setText("Modificar");
+        Background.add(ModService, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        EliminarService.setText("Eliminar");
+        Background.add(EliminarService, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 240, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -120,25 +123,20 @@ public class InventPlant extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RegPlantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegPlantActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_RegPlantActionPerformed
-
-    private void RegPlantMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegPlantMouseEntered
-        // Cambiar el color del botón al pasar el mouse
-    RegPlant.setBackground(new java.awt.Color(0, 153, 0)); // Verde
-    }//GEN-LAST:event_RegPlantMouseEntered
-    private void BotonPlantasMouseExited(java.awt.event.MouseEvent evt) {
-        // Restaurar el color original del botón cuando el mouse salga
-        RegPlant.setBackground(new java.awt.Color(15, 52, 52)); // Color original
-    }
+    private void SearchBarServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBarServiceActionPerformed
+       //Adding stuff
+    }//GEN-LAST:event_SearchBarServiceActionPerformed
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JButton ConsultPlant;
-    private javax.swing.JButton RegPlant;
+    private javax.swing.JButton EliminarService;
+    private javax.swing.JList<String> ListaService;
+    private javax.swing.JButton ModService;
+    private javax.swing.JTextField SearchBarService;
     private javax.swing.JLabel SignOut;
     private javax.swing.JPanel TopBar;
     private javax.swing.JLabel UserName;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

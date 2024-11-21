@@ -4,6 +4,8 @@
  */
 package com.mycompany.proyectopoo.Forms;
 
+import com.mycompany.proyectopoo.Forms.Plantas.InventPlant;
+
 
 /**
  *
