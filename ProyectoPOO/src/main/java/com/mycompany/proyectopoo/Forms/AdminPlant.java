@@ -123,10 +123,7 @@ public class AdminPlant extends javax.swing.JPanel {
     private void SearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SearchBarActionPerformed
-    private void BotonPlantasMouseExited(java.awt.event.MouseEvent evt) {
-        // Restaurar el color original del botón cuando el mouse salga
-        RegPlant.setBackground(new java.awt.Color(15, 52, 52)); // Color original
-    }
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
