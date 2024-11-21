@@ -121,7 +121,7 @@ public class AdminPlant extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void SearchBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchBarActionPerformed
-        // TODO add your handling code here:
+       //Adding stuff
     }//GEN-LAST:event_SearchBarActionPerformed
    
 
